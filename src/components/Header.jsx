@@ -42,22 +42,22 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-between w-screen relative z-10">
+    <div className="flex items-center justify-between w-full absolute top-0 left-0 z-50 px-8 py-4 bg-gradient-to-b from-black/80 to-transparent">
       <img
-        className="w-[92] h-20  mx-5"
+        className="w-40 h-16"
         src={LOGO}
         alt="logo"
       />
       {/* if user is null don't load this page */}
       {user && (
-        <div className="z-10 mx-5 flex ">
-          <button className="font-bold text-white bg-red-500 p-2 mr-3">GPT Search</button>
+        <div className="flex items-center space-x-4 text-white">
+          <button className="font-bold bg-red-600 px-3 py-2 rounded-lg">GPT Search</button>
           <img
-            className="mx-4 w-12 h-12"
+            className="w-12 h-12 rounded-md"
             src={user?.photoURL}
             alt="usericon"
           />
-          <button className="" onClick={handleSignOut}>
+          <button className="font-bold bg-red-600 px-3 py-2 rounded-lg" onClick={handleSignOut}>
             Sign Out
           </button>
         </div>

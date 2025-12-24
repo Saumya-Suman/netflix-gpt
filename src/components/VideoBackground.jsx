@@ -14,9 +14,9 @@ const VideoBackground = ({ movie_id }) => {
 
 
   return (
-    <div className="w-screen z-0 -mt-32">
+    <div className="absolute top-0 left-0 w-full h-full -z-10">
       <iframe
-      className="w-screen aspect-video "
+      className="w-full h-full object-cover"
         src={"https://www.youtube.com/embed/" + trailerVideo?.key + "?autoplay=1&mute=1"}
         title="YouTube video player"
       ></iframe>

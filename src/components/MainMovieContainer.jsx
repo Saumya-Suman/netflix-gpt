@@ -16,9 +16,11 @@ const MainMovieContainer = () => {
   const { original_title, overview, id } = mainMovie;
 
   return (
-    <div className="pb-15">
-      <VideoTitle title={original_title} overview={overview} />
+    <div className="relative h-screen text-white">
       <VideoBackground movie_id={id} />
+      <div className="absolute inset-0 flex flex-col justify-center px-16 bg-gradient-to-r from-black/70 to-transparent">
+        <VideoTitle title={original_title} overview={overview} />
+      </div>
     </div>
   );
 };
